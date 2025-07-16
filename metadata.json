@@ -1,5 +1,6 @@
 {
-  "name": "Ethan Fitzhenry | AI Solutions Architect",
-  "description": "A personal portfolio and service website for Ethan Fitzhenry, an AI Solutions Architect specializing in AI consulting, voice agents, and automations for businesses.",
-  "requestFramePermissions": []
+  "name": "Ethan Fitzhenry's Portfolio",
+  "description": "A high-performance, single-page application for Ethan Fitzhenry's freelance portfolio. This site serves as his professional calling card, showcasing his AI expertise, detailing his services, and capturing leads through an integrated scheduling tool.",
+  "requestFramePermissions": [],
+  "prompt": ""
 }

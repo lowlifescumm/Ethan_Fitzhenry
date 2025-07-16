@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethan Fitzhenry | AI Solutions Architect</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ethan Fitzhenry | AI & Software Development</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Calendly widget styles -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <script>
       tailwind.config = {
         theme: {
@@ -19,26 +16,57 @@
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
             },
+            colors: {
+              'primary': '#3b82f6', // blue-500
+              'primary-hover': '#2563eb', // blue-600
+              'secondary': '#374151', // gray-700
+              'background': '#030712', // gray-950
+              'card': '#111827', // gray-900
+              'text-main': '#f9fafb', // gray-50
+              'text-secondary': '#d1d5db', // gray-300
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+                fadeIn: {
+                    'from': { opacity: 0, transform: 'translateY(10px)' },
+                    'to': { opacity: 1, transform: 'translateY(0)' },
+                }
+            }
           }
         }
       }
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <style>
+      body {
+        background-color: #030712; /* Corresponds to 'bg-background' */
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111827' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+
   <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
     "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.9.0"
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0",
+    "dotenv": "https://esm.sh/dotenv@^17.2.0",
+    "express": "https://esm.sh/express@^5.1.0",
+    "cors": "https://esm.sh/cors@^2.8.5"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-900 text-slate-300">
+  <body class="bg-background text-text-main font-sans">
     <div id="root"></div>
-    <!-- Calendly widget script -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

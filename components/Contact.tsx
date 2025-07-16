@@ -1,29 +1,27 @@
 import React from 'react';
 
 const Contact: React.FC = () => {
-  const handleCalendlyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/sinfronterasit' });
+  const handleBookMeeting = () => {
+    if ((window as any).Calendly) {
+      (window as any).Calendly.initPopupWidget({
+        url: 'https://calendly.com/sinfronterasit',
+      });
     }
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-slate-900">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">Ready to Transform Your Business?</h2>
-        <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-          Let's discuss how AI can unlock new levels of growth and efficiency for you. Schedule a complimentary, no-obligation consultation today.
+        <h2 className="text-3xl md:text-4xl font-bold text-text-main mb-4">Ready to Build the Future?</h2>
+        <p className="text-text-secondary max-w-2xl mx-auto mb-8">
+          Let's discuss how AI can transform your business. Schedule a free, no-obligation consultation to get started.
         </p>
-        <div className="mt-10">
-          <a
-            href="#"
-            onClick={handleCalendlyClick}
-            className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
-          >
-            Book a Free Consultation
-          </a>
-        </div>
+        <button
+          onClick={handleBookMeeting}
+          className="bg-primary hover:bg-primary-hover text-white font-bold py-4 px-10 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-lg shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background"
+        >
+          Schedule Your Free Consultation
+        </button>
       </div>
     </section>
   );

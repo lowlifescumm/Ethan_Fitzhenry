@@ -1,33 +1,29 @@
 import React from 'react';
-import { profileImageData } from './imageData';
+import { profileImageDataUri } from './imageData';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 md:py-32 bg-slate-800">
+    <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/3">
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl group">
-              <img
-                src={profileImageData}
-                alt="Ethan Fitzhenry"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+          <div className="md:col-span-2">
+            <img 
+              src={profileImageDataUri} 
+              alt="Ethan Fitzhenry" 
+              className="rounded-lg shadow-2xl w-full h-auto object-cover aspect-square"
+            />
           </div>
-          <div className="md:w-2/3">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">About Me</h2>
-            <div className="w-20 h-1 bg-cyan-400 my-6"></div>
-            <p className="text-lg text-slate-300 mb-4 leading-relaxed">
-              I'm an AI Solutions Architect with a passion for making the power of artificial intelligence accessible to small and medium-sized businesses.
+          <div className="md:col-span-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-main mb-4">About Me</h2>
+            <p className="text-text-secondary mb-4">
+              I am a passionate software engineer with a deep focus on artificial intelligence and machine learning. My journey into tech was driven by a fascination with how complex systems can be modeled to solve real-world problems. I thrive on bridging the gap between cutting-edge AI capabilities and practical business applications.
             </p>
-            <p className="text-lg text-slate-300 mb-4 leading-relaxed">
-             My experience ranges from developing proprietary design systems to architecting and deploying AI-powered applications that tangibly improve user engagement and operational efficiency. I thrive on translating complex business needs into effective, data-driven results.
+            <p className="text-text-secondary mb-6">
+              With experience in developing scalable applications and deploying machine learning models, I help businesses innovate and automate. Whether it's building a smart chatbot, creating a custom recommendation engine, or optimizing a workflow with AI, my goal is to deliver robust, efficient, and impactful solutions.
             </p>
-            <p className="text-lg text-slate-300 leading-relaxed">
-              All my services are delivered <strong className="text-cyan-400">100% remotely</strong>, allowing for flexible collaboration and focused execution, no matter where your business is located. Let's connect and explore how AI can transform your operations.
-            </p>
+            <a href="https://www.linkedin.com/in/ethan-fitzhenry/" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary hover:bg-primary-hover text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-card">
+              Connect on LinkedIn
+            </a>
           </div>
         </div>
       </div>

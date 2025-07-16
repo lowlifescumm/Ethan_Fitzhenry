@@ -8,18 +8,29 @@ import Process from './components/Process';
 import AIGenerator from './components/AIGenerator';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AnimatedSection from './components/AnimatedSection';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900 font-sans">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main>
+      <main className="flex-grow">
         <Hero />
-        <Services />
-        <About />
-        <Process />
-        <AIGenerator />
-        <Contact />
+        <AnimatedSection>
+            <Services />
+        </AnimatedSection>
+        <AnimatedSection>
+            <About />
+        </AnimatedSection>
+        <AnimatedSection>
+            <Process />
+        </AnimatedSection>
+        <AnimatedSection>
+            <AIGenerator />
+        </AnimatedSection>
+        <AnimatedSection>
+            <Contact />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>

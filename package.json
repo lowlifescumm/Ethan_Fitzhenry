@@ -1,5 +1,5 @@
 {
-  "name": "ethan-fitzhenry-|-ai-solutions-architect",
+  "name": "ethan-fitzhenry's-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,10 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@google/genai": "^1.9.0"
+    "@google/genai": "^1.9.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
